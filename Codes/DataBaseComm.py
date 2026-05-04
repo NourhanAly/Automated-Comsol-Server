@@ -141,7 +141,7 @@ def upsert_case_status(
 class CaseHeartbeat:
     """
     Runs a background thread that updates the DB every interval_seconds.
-    You can also push stage updates immediately via .update(...)
+   
     """
     def __init__(
         self,

@@ -107,10 +107,8 @@ def run_comsol_until_license(
 
 def _parse_metadata_file(meta_txt_path: Path, encoding: str = "utf-8") -> dict[str, str]:
     """
-    NEW BEHAVIOR:
       - Metadata is stored as raw text in DB and written to .txt.
-      - Try JSON first (most robust).
-      - Fallback to your previous tab-delimited key/value parsing.
+
     """
     raw = meta_txt_path.read_text(encoding=encoding, errors="replace").strip()
     if not raw:
