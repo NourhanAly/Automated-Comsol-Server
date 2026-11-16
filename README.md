@@ -32,7 +32,3 @@ PostgreSQL Database
 (Storing model outputs and predictions)
 ```
 
-        |
-        v
-PostgreSQL Database
-(Stores predictions and comparisons)
