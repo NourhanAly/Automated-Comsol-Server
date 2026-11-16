@@ -4,3 +4,38 @@ The purpose of this server is to allow commination between the working battery a
 two sides are considered: local desktop with Comsol installed (Comsol server side) and postgresql database as the cloud to be communicated with.
 
 The steps of the server are mainly: Downloading input data from the Postgresql database, running the COMSOL modelling flow according to the input to obtain the desired output and finally sending the output files to the database.
+
+
+# Server Flow
+Battery Tester
+(Experimental measurements)
+
+        |
+        v
+PostgreSQL Database
+(Stores battery test data)
+
+        |
+        v
+Python Automation Layer
+(Data retrieval and preprocessing)
+
+        |
+        v
+COMSOL Battery Model
+(Simulation using current battery state)
+
+        |
+        v
+Predicted State-of-Health (SOH)
+and Model Outputs
+
+        |
+        v
+Python Automation Layer
+(Result processing and upload)
+
+        |
+        v
+PostgreSQL Database
+(Stores predictions and comparisons)
