@@ -7,33 +7,30 @@ The steps of the server are mainly: Downloading input data from the Postgresql d
 
 
 # Server Flow
-Battery Tester
-(Experimental measurements)
-
+```text
+Battery Tester (Experimental measurements)
         |
         v
-PostgreSQL Database
-(Stores battery test data)
-
+PostgreSQL Database (Stores battery test data)
         |
         v
-Python Automation Layer
-(Data retrieval and preprocessing)
-
+Python Automation Layer (Data retrieval and preprocessing)
         |
         v
 COMSOL Battery Model
-(Simulation using current battery state)
-
+(Run model with current battery conditions)
         |
         v
 Predicted State-of-Health (SOH)
-and Model Outputs
-
+and Model/Measurement Comparison
         |
         v
-Python Automation Layer
-(Result processing and upload)
+Python Automation Layer (Result processing and upload)
+        |
+        v
+PostgreSQL Database
+(Storing model outputs and predictions)
+```
 
         |
         v
