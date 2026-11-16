@@ -1,9 +1,12 @@
 # Automated-Comsol-Server
-The purpose of this server is to allow commination between the working battery and the predictive COMSOL model, seeing as the model could provide valuable parameters concerning the state of health of the battery.
 
-two sides are considered: local desktop with Comsol installed (Comsol server side) and postgresql database as the cloud to be communicated with.
+This repository implements the communication layer between a predictive COMSOL battery model and experimental battery data. The framework enables automated estimation of battery state-of-health (SOH) parameters by coupling laboratory measurements with a physics-based simulation model.
+The system consists of two main components:
 
-The steps of the server are mainly: Downloading input data from the Postgresql database, running the COMSOL modelling flow according to the input to obtain the desired output and finally sending the output files to the database.
+- A local workstation running COMSOL and the Python automation server.
+- A PostgreSQL database used to store experimental measurements and model outputs.
+The server workflow consists of retrieving battery measurements from the PostgreSQL database, running the COMSOL model with the corresponding battery conditions, and uploading the resulting SOH predictions and model outputs back to the database.
+
 
 
 # Server Flow
